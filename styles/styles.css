@@ -1,0 +1,846 @@
+/* Variáveis CSS - Apenas para valores repetidos */
+:root {
+    --cor-principal: #222222;
+    --cor-secundaria: #666666;
+    --cor-destaque: #e31c5f;
+    --cor-borda: #dddddd;
+    --cor-fundo-cinza: #f7f7f7;
+    --cor-branco: #ffffff;
+    --cor-cinza-claro: #999999;
+    
+    --fonte-tamanho-p: 16px;
+    --fonte-tamanho-menu: 14px;
+    
+    --fonte-peso-semibold: 600;
+    
+    --espacamento-pequeno: 8px;
+    --espacamento-medio: 16px;
+    --espacamento-grande: 20px;
+    --espacamento-extra: 40px;
+    
+    --border-radius-circular: 50%;
+    
+    --altura-icone: 40px;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--cor-principal);
+}
+
+/* Cabeçalho */
+.cabecalho {
+    border-bottom: 1px solid var(--cor-borda);
+    padding: 50px;
+    height: 70px;
+}
+
+.nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo-img {
+    height: 32px;
+    width: auto;
+}
+
+.busca {
+    display: flex;
+    border: 1px solid var(--cor-borda);
+    border-radius: 32px;
+    padding: 0;
+    flex: 1;
+    max-width: 480px;
+    margin: 0 var(--espacamento-grande);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
+    align-items: center;
+    background: var(--cor-branco);
+    height: 48px;
+}
+
+.busca-item {
+    padding: 12px var(--espacamento-medio);
+    border-right: 1px solid var(--cor-borda);
+    font-size: var(--fonte-tamanho-menu);
+    font-weight: var(--fonte-peso-semibold);
+    color: var(--cor-principal);
+    white-space: nowrap;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: var(--espacamento-pequeno);
+    height: 100%;
+    flex-shrink: 0;
+    min-width: fit-content;
+}
+
+.icone-casa {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.busca-item:last-of-type {
+    border-right: none;
+}
+
+.busca-icone {
+    background: #ff385c;
+    color: var(--cor-branco);
+    border-radius: var(--border-radius-circular);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fonte-tamanho-menu);
+    flex-shrink: 0;
+    cursor: pointer;
+    margin: var(--espacamento-pequeno) var(--espacamento-pequeno) var(--espacamento-pequeno) 0;
+}
+
+.acoes {
+    display: flex;
+    align-items: center;
+    gap: var(--espacamento-medio);
+    font-size: var(--fonte-tamanho-menu);
+    font-weight: var(--fonte-peso-semibold);
+    color: var(--cor-principal);
+}
+
+.anfitriao {
+    padding: 12px var(--espacamento-medio);
+    border-radius: 22px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.anfitriao:hover {
+    background: var(--cor-fundo-cinza);
+}
+
+.icone-globo {
+    width: var(--altura-icone);
+    height: var(--altura-icone);
+    border-radius: var(--border-radius-circular);
+    background: var(--cor-fundo-cinza);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: var(--espacamento-medio);
+}
+
+.menu-hamburguer {
+    width: var(--altura-icone);
+    height: var(--altura-icone);
+    border-radius: var(--border-radius-circular);
+    background: var(--cor-fundo-cinza);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: var(--espacamento-medio);
+}
+
+/* Conteúdo Principal */
+.conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--espacamento-grande);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Título */
+.titulo {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo h1 {
+    font-size: 24px;
+    font-weight: var(--fonte-peso-semibold);
+    margin-bottom: var(--espacamento-pequeno);
+}
+
+.botoes-titulo {
+    display: flex;
+    gap: var(--espacamento-grande);
+}
+
+.botao-compartilhar,
+.botao-salvar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: var(--fonte-tamanho-menu);
+    font-weight: var(--fonte-peso-semibold);
+    color: var(--cor-principal);
+    display: flex;
+    align-items: center;
+    gap: var(--espacamento-pequeno);
+    text-decoration: underline;
+    padding: var(--espacamento-pequeno) 0;
+}
+
+.botao-compartilhar:hover,
+.botao-salvar:hover {
+    color: var(--cor-secundaria);
+}
+
+/* Container das Fotos */
+.container-fotos {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+/* Grade de Imagens - APENAS GRID */
+.grade-imagens {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: var(--espacamento-pequeno);
+    border-radius: 8px;
+     overflow: hidden;
+    height: 400px;
+    width: 100%;
+    margin: 0 auto 10px;
+}
+
+.imagem-principal {
+    grid-row: 1 / 3;
+}
+
+
+
+.grade-imagens img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Informações do Imóvel */
+.info-imovel {
+    display: flex;
+    gap: var(--espacamento-extra);
+    width: 100%;
+}
+
+.info-esquerda {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.widget-reserva {
+    flex: 1;
+    background: var(--cor-branco);
+    border: 0px solid var(--cor-borda);
+    border-radius: 12px;
+    padding: var(--espacamento-grande);
+    height: fit-content;
+    position: sticky;
+    top: var(--espacamento-grande);
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0,0,0,0.12) 0 6px 16px;
+}
+
+/* Localização */
+.localizacao {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* Preferido dos Hóspedes */
+.preferido-hospedes {
+    margin: var(--espacamento-grande) 0;
+   
+}
+
+.img-preferido {
+    width: 95%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--cor-borda);
+    padding: 20px 20px 30px
+}
+
+/* Linha Divisória */
+.linha-divisoria {
+    height: 1px;
+    background: var(--cor-borda);
+    margin: var(--espacamento-grande) 0;
+}
+
+
+/* Anfitrião Info */
+.anfitriao-info {
+    margin: var(--espacamento-grande) 0;
+}
+
+.anfitriao-conteudo {
+    display: flex;
+    align-items: center;
+    gap: var(--espacamento-medio);
+}
+
+.container-foto-anfitriao {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+.foto-anfitriao {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.icone-airbnb {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+}
+
+.info-anfitriao h4 {
+    font-size: var(--fonte-tamanho-p);
+    font-weight: var(--fonte-peso-semibold);
+    color: var(--cor-principal);
+    margin: 0 0 4px 0;
+}
+
+.info-anfitriao p {
+    color: var(--cor-secundaria);
+    font-size: var(--fonte-tamanho-p);
+}
+
+/* Lista de Recursos */
+.recursos-lista {
+    margin: var(--espacamento-grande) 0;
+}
+
+.recurso-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--espacamento-extra);
+    margin-bottom: var(--espacamento-grande);
+}
+
+.recurso-texto strong {
+    display: block;
+    font-weight: var(--fonte-peso-semibold);
+    color: var(--cor-principal);
+    margin-bottom: 4px;
+}
+
+.recurso-texto p {
+    color: var(--cor-secundaria);
+    font-size: var(--fonte-tamanho-p);
+    margin: 0;
+}
+
+
+h2 {
+    font-size: 22px;
+    font-weight: var(--fonte-peso-semibold);
+}
+
+.localizacao h2 {
+    margin-bottom: 0px;
+}
+
+.descricao h2 {
+    margin-bottom: var(--espacamento-pequeno);
+}
+
+.localizacao p {
+    color: var(--cor-principal);
+    font-size: var(--fonte-tamanho-p);
+}
+
+/* Descrição */
+.descricao {
+    margin-bottom: var(--espacamento-grande);
+    padding-bottom: var(--espacamento-grande);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.descricao h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.descricao p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: var(--fonte-tamanho-p);
+}
+
+/* Comodidades */
+.comodidades {
+    margin-bottom: var(--espacamento-grande);
+    padding-bottom: var(--espacamento-grande);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.comodidades h3 {
+    font-size: 20px;
+    margin-bottom: var(--espacamento-grande);
+}
+
+.lista-comodidades {
+    display: flex;
+    gap: var(--espacamento-extra);
+}
+
+.coluna-comodidades {
+    flex: 1;
+}
+
+.coluna-comodidades ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.coluna-comodidades li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: var(--fonte-tamanho-p);
+}
+
+.icone {
+    font-size: 18px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.riscado {
+    text-decoration: line-through;
+    color: var(--cor-cinza-claro);
+}
+
+/* Avaliações */
+.avaliacoes {
+    margin-bottom: var(--espacamento-grande);
+    padding-bottom: var(--espacamento-grande);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.avaliacoes h3 {
+    font-size: 20px;
+    margin-bottom: var(--espacamento-grande);
+}
+
+.avaliacoes-individuais {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--espacamento-extra);
+}
+
+.avaliacao-item {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.avaliador {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.foto-avaliador {
+    width: var(--altura-icone);
+    height: var(--altura-icone);
+    border-radius: var(--border-radius-circular);
+    object-fit: cover;
+}
+
+.info-avaliador h4 {
+    font-size: var(--fonte-tamanho-p);
+    margin-bottom: 4px;
+}
+
+.info-avaliador p {
+    color: var(--cor-secundaria);
+    font-size: var(--fonte-tamanho-menu);
+}
+
+.tempo-airbnb {
+    color: var(--cor-principal);
+    font-size: var(--fonte-tamanho-menu);
+}
+
+.nota-data {
+    color: var(--cor-principal);
+    font-size: var(--fonte-tamanho-menu);
+    margin-bottom: 8px;
+}
+
+.nota-data .separador-cinza {
+    color: var(--cor-secundaria);
+}
+
+.nota-data .duracao-estadia {
+    color: var(--cor-cinza-claro);
+}
+
+.conteudo-avaliacao p {
+    font-size: var(--fonte-tamanho-p);
+    line-height: 1.5;
+}
+
+/* Regras */
+.regras {
+    margin-bottom: var(--espacamento-grande);
+}
+
+.regras h2 {
+    font-size: 22px;
+    font-weight: var(--fonte-peso-semibold);
+    margin-bottom: var(--espacamento-medio);
+    color: var(--cor-principal);
+}
+
+.regras h3 {
+    font-size: 16px;
+    font-weight: var(--fonte-peso-semibold);
+    margin-bottom: var(--espacamento-pequeno);
+    color: var(--cor-principal);
+}
+
+.regras ul {
+    list-style: none;
+}
+
+.regras li {
+    margin-bottom: var(--espacamento-pequeno);
+    font-size: var(--fonte-tamanho-p);
+    color: var(--cor-principal);
+}
+
+.mostrar-mais {
+    color: var(--cor-principal);
+    text-decoration: underline;
+    font-size: var(--fonte-tamanho-p);
+    font-weight: var(--fonte-peso-semibold);
+    margin-top: var(--espacamento-pequeno);
+    display: inline-block;
+}
+
+/* Widget de Reserva */
+.preco {
+    display: flex;
+    align-items: baseline;
+    gap: var(--espacamento-pequeno);
+    margin-bottom: var(--espacamento-grande);
+    border: none;
+    box-shadow: none;
+}
+
+.valor {
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.periodo {
+    color: var(--cor-principal);
+    font-size: var(--fonte-tamanho-p);
+}
+
+.datas {
+    border: 1px solid #222222;
+    border-radius: 8px;
+    margin-bottom: var(--espacamento-grande);
+    display: flex;
+    flex-direction: column;
+}
+
+.data {
+    padding: 10px;
+    border-bottom: 1px solid #222222;
+    flex: 1;
+}
+
+.hospedes {
+    padding: 10px;
+    border-bottom: none;
+}
+
+.datas-superior {
+    display: flex;
+    border-bottom: 1px solid #222222;
+}
+
+.datas-superior .data {
+    border-bottom: none;
+    border-right: 1px solid #222222;
+}
+
+.datas-superior .data:last-child {
+    border-right: none;
+}
+
+.data label, .hospedes label {
+    display: block;
+    font-size: 12px;
+    font-weight: var(--fonte-peso-semibold);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.valor-data, .valor-hospedes {
+    font-size: var(--fonte-tamanho-menu);
+}
+
+.hospedes {
+    position: relative;
+    
+}
+
+.hospedes::after {
+    content: "▼";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #222222;
+    pointer-events: none;
+    font-weight: bold;
+}
+
+.botao-reservar {
+    width: 100%;
+    background: var(--cor-destaque);
+    color: var(--cor-branco);
+    border: none;
+    border-radius: 25px;
+    padding: 18px;
+    font-size: var(--fonte-tamanho-p);
+    font-weight: var(--fonte-peso-semibold);
+    cursor: pointer;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.aviso-pagamento {
+    text-align: center;
+    font-size: var(--fonte-tamanho-menu);
+    color: var(--cor-principal);
+}
+
+/* RESPONSIVIDADE - Mobile First */
+@media (max-width: 1024px) {
+    .grade-imagens {
+        height: 300px;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 6px;
+    }
+    
+    .imagem-principal {
+        grid-row: 1 / 3;
+    }
+    
+    .info-imovel {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cabecalho {
+        height: auto;
+    }
+    
+    .nav {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+    
+    .busca {
+        margin: 0;
+        max-width: 100%;
+        order: 2;
+        width: 100%;
+        height: 44px;
+    }
+    
+    .busca-item {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+    
+    .busca-icone {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+        margin: 8px 8px 8px 0;
+    }
+    
+    .acoes {
+        order: 3;
+        justify-content: center;
+    }
+    
+    .conteudo {
+        padding: 15px;
+    }
+    
+    .titulo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .titulo h1 {
+        font-size: 20px;
+    }
+    
+    /* Grade de Imagens Responsiva */
+    .grade-imagens {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 250px;
+        gap: 4px;
+    }
+    
+    .imagem-principal {
+        grid-row: 1 / 3;
+    }
+    
+    .info-imovel {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .widget-reserva {
+        order: -1;
+        position: static;
+    }
+    
+    .lista-comodidades {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .avaliacoes-individuais {
+        grid-template-columns: 1fr;
+        gap: var(--espacamento-grande);
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        padding: 10px 15px;
+        gap: 10px;
+    }
+    
+    .busca {
+        height: 40px;
+    }
+    
+    .busca-item {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+    
+    .busca-icone {
+        width: 24px;
+        height: 24px;
+        font-size: 10px;
+        margin: 8px 8px 8px 0;
+    }
+    
+    .anfitriao {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+    
+    .icone-globo,
+    .menu-hamburguer {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+    
+    .conteudo {
+        padding: 10px;
+    }
+    
+    .grade-imagens {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 200px;
+        gap: 3px;
+    }
+    
+    .imagem-principal {
+        grid-row: 1 / 3;
+    }
+    
+    .titulo h1 {
+        font-size: 18px;
+    }
+    
+    .localizacao h2 {
+        font-size: 18px;
+    }
+    
+    .descricao h3,
+    .comodidades h3,
+    .avaliacoes h3,
+    .regras h2 {
+        font-size: 18px;
+    }
+    
+    .regras h3 {
+        font-size: 14px;
+    }
+    
+    .widget-reserva {
+        padding: 15px;
+    }
+    
+    .valor {
+        font-size: 20px;
+    }
+}
