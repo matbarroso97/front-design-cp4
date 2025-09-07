@@ -4,7 +4,7 @@
 
 **Link do imóvel semi-replicado:** https://www.airbnb.com.br/rooms/52334164?check_in=2025-10-31&check_out=2025-11-02&guests=1&adults=1&s=67&unique_share_id=c7f2e57e-52fd-4ffa-a252-90273bcb6ebe
 
-**Link do site publicado:** [GitHub Pages](https://matheusbarroso.github.io/front-design-cp4/)
+**Link do site publicado:** [GitHub Pages](https://matbarroso97.github.io/front-design-cp4/)
 
 ---
 
